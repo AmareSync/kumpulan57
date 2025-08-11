@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>🔸 To-Do List</h3>
+        <p><strong>Purpose:</strong> Organize daily tasks, schoolwork, or projects.</p>
+        <div class="row">
+            <input type="text" placeholder="Add a new task...">
+            <button class="btn-primary">Add Task</button>
+        </div>
+        <ul class="task-list">
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="task-title">Finish project report</span>
+                </label>
+                <button class="btn-small">❌</button>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="task-title">Buy groceries</span>
+                </label>
+                <button class="btn-small">❌</button>
+            </li>
+            <li class="done">
+                <label>
+                    <input type="checkbox" checked>
+                    <span class="task-title">Call mom</span>
+                </label>
+                <button class="btn-small">❌</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

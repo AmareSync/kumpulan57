@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy / Focus Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>🔸 Energy / Focus Tracker</h3>
+        <p><strong>Purpose:</strong> Track your focus and energy levels to identify productivity trends.</p>
+        <div style="margin-bottom: 20px;">
+            <label for="focus-level">Rate your focus (1-10):</label>
+            <div class="row">
+                <input type="range" id="focus-level" name="focus-level" min="1" max="10" value="7">
+                <span id="focus-value">7</span>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="energy-level">Rate your energy (1-10):</label>
+            <div class="row">
+                <input type="range" id="energy-level" name="energy-level" min="1" max="10" value="8">
+                <span id="energy-value">8</span>
+            </div>
+        </div>
+        <button class="btn-primary">Save Rating</button>
+    </div>
+    <script>
+        // Simple JavaScript to show the value of the slider
+        document.getElementById('focus-level').addEventListener('input', function() {
+            document.getElementById('focus-value').textContent = this.value;
+        });
+        document.getElementById('energy-level').addEventListener('input', function() {
+            document.getElementById('energy-value').textContent = this.value;
+        });
+    </script>
+</body>
+</html>

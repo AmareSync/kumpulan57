@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AmareSync — Love your life, sync your way</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-home">
+<header class="site-header">
+    <div class="container header-inner">
+    <a href="index.html" class="brand">
+        <div class="logo-dot">A</div>
+        <div class="brand-text">
+        <h1>AmareSync</h1>
+        <p class="tagline">Love your life, sync your way</p>
+        </div>
+    </a>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="admin.html">Admin</a>
+        <a href="signup.html" class="btn-primary" >Join AmareSync</a>
+    </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-left">
+        <h2>Life in sync — one place for habits, focus & wellbeing</h2>
+        <p class="lead">AmareSync helps teens and working adults organize tasks, track mood & habits, plan time blocks, and reflect—so life feels less chaotic and more rewarding.</p>
+
+        <ul class="features">
+            <li>Mood & mental health check-ins</li>
+            <li>To-do list & time block planner</li>
+            <li>Goals, habit tracking, and journaling</li>
+        </ul>
+
+        <div class="cta-row">
+            <a class="btn-ghost" href="tools.html">Explore tools</a>
+            <a class="btn-accent" href="#stats">See community</a>
+        </div>
+        </div>
+
+        <div class="hero-right">
+        <!-- aesthetic card matching the pink theme -->
+        <div class="mock-viewport">
+            <div class="mock-header">AmareSync • Dashboard</div>
+            <div class="mock-body">
+            <div class="mock-card">
+                <h3>Today's mood</h3>
+                <p>😊 Balanced</p>
+            </div>
+            <div class="mock-card small">
+                <h4>Top tasks</h4>
+                <ul>
+                <li>Finish assignment</li>
+                <li>Plan weekly time blocks</li>
+                </ul>
+            </div>
+            </div>
+            <div class="mock-footer">Sync your life — feel better</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="stats" class="container stats">
+    <div class="stat-card">
+        <h4>Total joined</h4>
+        <div class="stat-number" id="joinedCount">—</div>
+        <p class="muted">Demo numbers stored locally in your browser.</p>
+    </div>
+
+    <div class="stat-card">
+        <h4>Target audience</h4>
+        <p>Teens & working adults</p>
+        <p class="muted">Use the Admin panel to reset demo numbers.</p>
+    </div>
+
+    <div class="stat-card">
+        <h4>Ten core tools</h4>
+        <ol class="tools-list">
+        <li>Mood Tracker</li>
+        <li>To-Do List</li>
+        <li>Habit Tracker</li>
+        <li>Time Block Planner</li>
+        <li>Journal</li>
+        <li>Goal Setter</li>
+        <li>Focus Tracker</li>
+        <li>Mental Health Check-in</li>
+        <li>Distraction Log</li>
+        <li>Vision Board</li>
+        </ol>
+    </div>
+    </section>
+
+    <section class="container about">
+    <h3>Why AmareSync exists</h3>
+    <p>To help people take control of busy lives by combining organization, reflection and habit-building into one friendly platform—so they can maintain focus, balance and progress without overwhelm.</p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+    <p>© <span id="year"></span> AmareSync — Love your life, sync your way</p>
+    <nav>
+        <a href="tools.html">Tools</a> ·
+        <a href="admin.html">Admin</a>
+    </nav>
+    </div>
+    <div id="moodPopup" class="popup-modal" style="display: none;">
+    <div class="popup-content">
+        <h4>Mood Logged!</h4>
+        <p>Your mood has been saved successfully.</p>
+        <button id="closePopupBtn" class="btn-primary">Close</button>
+    </div>
+</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

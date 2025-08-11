@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AmareSync Tools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-tools">
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-dot">A</div>
+        <div class="brand-text">
+          <h1>AmareSync</h1>
+          <p class="tagline">Love your life, sync your way</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container tools-hero">
+      <h2>AmareSync Tools</h2>
+      <p class="lead">All tools are built to work together — start with one and grow from there.</p>
+    </section>
+
+    <section class="container tools-grid">
+      <a class="tool" href="mood-tracker.html">
+        <div class="tool-icon">😊</div>
+        <h4>Mood Tracker</h4>
+        <p>Log daily mood, quick check-ins, and mood history.</p>
+      </a>
+
+      <a class="tool" href="todo-list.html">
+        <div class="tool-icon">📝</div>
+        <h4>To-Do List</h4>
+        <p>Create tasks, set deadlines, and tick them off.</p>
+      </a>
+
+      <div class="tool">
+        <div class="tool-icon">🔁</div><h4>Habit Tracker</h4><p>Track streaks and habit consistency.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">⏳</div><h4>Time Block Planner</h4><p>Plan deep work blocks and breaks.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">📓</div><h4>Journal</h4><p>Reflect daily with private notes.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">🎯</div><h4>Goal Setter</h4><p>Create measurable goals and milestones.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">🔍</div><h4>Focus Tracker</h4><p>Track focused sessions and productivity.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">🩺</div><h4>Mental Health Check-in</h4><p>Short well-being checklists.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">📉</div><h4>Distraction Log</h4><p>Note distraction triggers & patterns.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-icon">🖼️</div><h4>Vision Board</h4><p>Collect images, quotes & inspiration.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year2"></span> AmareSync</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

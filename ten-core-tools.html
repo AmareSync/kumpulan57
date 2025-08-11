@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmareSync - Ten Core Tools</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        text-align: center;
+        padding: 40px;
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 30px;
+    }
+    .tool-section {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background: #fff;
+        margin: 8px auto;
+        padding: 12px;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: transform 0.2s, background 0.2s;
+    }
+    li:hover {
+        transform: scale(1.05);
+        background: #eef0ff;
+    }
+</style>
+</head>
+<body>
+
+<h2>Ten Core Tools</h2>
+
+<div class="tool-section">
+    <ul>
+        <li onclick="openTool('mood-tracker.html')">Mood Tracker</li>
+        <li onclick="openTool('todo-list.html')">To-Do List</li>
+        <li onclick="openTool('habit-tracker.html')">Habit Tracker</li>
+        <li onclick="openTool('time-block-planner.html')">Time Block Planner</li>
+        <li onclick="openTool('journal.html')">Journal</li>
+    </ul>
+</div>
+
+<div class="tool-section">
+    <ul>
+        <li onclick="openTool('goal-setter.html')">Goal Setter</li>
+        <li onclick="openTool('focus-tracker.html')">Focus Tracker</li>
+        <li onclick="openTool('mental-health-checkin.html')">Mental Health Check-in</li>
+        <li onclick="openTool('distraction-log.html')">Distraction Log</li>
+        <li onclick="openTool('vision-board.html')">Vision Board</li>
+    </ul>
+</div>
+
+<script>
+function openTool(page) {
+    window.location.href = page; 
+}
+</script>
+
+</body>
+</html>

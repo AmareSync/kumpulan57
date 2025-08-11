@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>🔸 Mood Tracker</h3>
+        <p><strong>Purpose:</strong> Track daily emotional states to reflect on mental health patterns.</p>
+        
+        <div class="mood-input">
+            <p>How are you feeling today?</p>
+            <label><input type="radio" name="mood" value="happy"> Happy 😊</label>
+            <label><input type="radio" name="mood" value="sad"> Sad 😞</label>
+            <label><input type="radio" name="mood" value="anxious"> Anxious 😟</label>
+            <button class="btn-primary">Save Mood</button>
+        </div>
+
+        <hr>
+
+        <div class="mood-breakdown">
+            <h4>Monthly Mood Breakdown</h4>
+            <ul>
+                <li>
+                    <span class="mood-label">Happy 😊</span>
+                    <div class="progress-bar" style="width: 60%; background-color: var(--pink);"></div>
+                    <span class="mood-percentage">60%</span>
+                </li>
+                <li>
+                    <span class="mood-label">Anxious 😟</span>
+                    <div class="progress-bar" style="width: 25%; background-color: var(--accent);"></div>
+                    <span class="mood-percentage">25%</span>
+                </li>
+                <li>
+                    <span class="mood-label">Sad 😞</span>
+                    <div class="progress-bar" style="width: 15%; background-color: var(--deep-pink);"></div>
+                    <span class="mood-percentage">15%</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join AmareSync</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .signup-form {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .signup-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .signup-form input,
+    .signup-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .signup-form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .signup-form button {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-dot">A</div>
+        <div class="brand-text">
+          <h1>AmareSync</h1>
+          <p class="tagline">Love your life, sync your way</p>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="text-align:center; margin-top:1.5rem;">Sign Up for AmareSync</h2>
+    <form action="data.php" method="POST" class="signup-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="birthdate">Birth Date:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> AmareSync — Love your life, sync your way</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

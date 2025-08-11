@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — AmareSync (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-admin">
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-dot">A</div>
+        <div class="brand-text"><h1>AmareSync</h1><p class="tagline">Admin</p></div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-panel">
+    <h2>Admin (Demo)</h2>
+    <p class="muted">This admin page is a demo and controls a local demo statistic only.</p>
+
+    <div class="admin-row">
+      <div>
+        <label>Admin password (demo):</label>
+        <input id="adminPass" type="password" placeholder="enter demo password" />
+        <button id="adminLogin" class="btn-primary">Login</button>
+      </div>
+
+      <div class="admin-controls" style="display:none;">
+        <h3>Community stats</h3>
+        <p>Total joined (local demo): <strong id="adminCount">—</strong></p>
+
+        <div class="row">
+          <input id="setCount" type="number" placeholder="Set new joined count" />
+          <button id="setBtn" class="btn-accent">Set</button>
+          <button id="resetBtn" class="btn-ghost">Reset to demo</button>
+        </div>
+
+        <p class="muted">Note: This only changes a number in your browser (localStorage). Replace with a server API when you have real users.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Demo admin: very lightweight. In a real app use server auth.
+    const demoPassword = 'amare-admin-demo';
+    const loginBtn = document.getElementById('adminLogin');
+    const adminControls = document.querySelector('.admin-controls');
+    const adminCount = document.getElementById('adminCount');
+    const setBtn = document.getElementById('setBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function getJoined() {
+      return Number(localStorage.getItem('amare_joined') || '4382'); // seeded demo
+    }
+    function setJoined(n) {
+      localStorage.setItem('amare_joined', String(n));
+      adminCount.textContent = n;
+    }
+
+    loginBtn.addEventListener('click', () => {
+      const pass = document.getElementById('adminPass').value;
+      if (pass === demoPassword) {
+        adminControls.style.display = 'block';
+        setJoined(getJoined());
+      } else {
+        alert('Wrong demo password (try "amare-admin-demo")');
+      }
+    });
+
+    setBtn.addEventListener('click', () => {
+      const v = Number(document.getElementById('setCount').value || 0);
+      if (v >= 0) setJoined(v);
+    });
+
+    resetBtn.addEventListener('click', () => {
+      const seed = 4382;
+      setJoined(seed);
+    });
+
+    // show initial count even before login in header
+    const headerCount = getJoined();
+    // expose for index page script to pick up
+    localStorage.setItem('amare_joined', String(headerCount));
+  </script>
+</body>
+</html>
